@@ -21,7 +21,7 @@ The model is trained using 5-fold cross-validation with PyTorch and NNI, and sup
 ### 1. Data Structure
 
 Each fold must contain the following:
-'''
+```plaintext
 /fold_1/
 ├── train/
 │   ├── class_0/
@@ -29,7 +29,6 @@ Each fold must contain the following:
 └── val/
     ├── class_0/
     └── class_1/
-'''
 
 - Images: PNG files.
 - Only files matching a specified pattern (e.g., `'fun-002'`) are used.
@@ -76,5 +75,6 @@ This codebase is part of the work described in the following study:
 
 If you use this code or build upon it, please cite the above paper.  
 (*Formal citation will be updated upon publication*)
+
 
 
