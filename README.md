@@ -9,7 +9,7 @@ The model is trained using 5-fold cross-validation with PyTorch and NNI, and sup
 
 - **Task**: Binary classification (0 = No recurrence, 1 = Recurrence)
 - **Input**: Fundus(or OCT) images (PNG format)
-- **Backbones**: resnet50, densenet121, efficientnet_b0 etc.
+- **Backbones**: inception_v3, efficientnet_b0 etc.
 - **Cross-validation**: 5-fold
 - **Framework**: PyTorch + timm + NNI
 - **Output**: Per-fold best models, metrics, loss/CM plots, final summary
@@ -21,14 +21,15 @@ The model is trained using 5-fold cross-validation with PyTorch and NNI, and sup
 ### 1. Data Structure
 
 Each fold must contain the following:
-
+'''
 /fold_1/
 ├── train/
-│ ├── class_0/
-│ └── class_1/
+│   ├── class_0/
+│   └── class_1/
 └── val/
-├── class_0/
-└── class_1/
+    ├── class_0/
+    └── class_1/
+'''
 
 - Images: PNG files.
 - Only files matching a specified pattern (e.g., `'fun-002'`) are used.
@@ -75,4 +76,5 @@ This codebase is part of the work described in the following study:
 
 If you use this code or build upon it, please cite the above paper.  
 (*Formal citation will be updated upon publication*)
+
 
